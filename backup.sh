@@ -1,0 +1,2 @@
+cp ~/.vimrc .
+cp ~/.zshrc .
