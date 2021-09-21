@@ -1,0 +1,65 @@
+# ~/.config/starship.toml
+# [macro_use] extern crate random_number;
+
+add_newline = false
+
+# old colors
+# ----------
+# blue = "blue"
+# red  = "red"
+# green= "green"
+# purple="purple"
+# yellow="yellow"
+
+# colors
+red="#f97583"
+green="#85e89d"
+yellow="#ffea7f"
+blue="#79b8ff"
+pink="#f692ce"
+orange="#ffab70"
+
+
+[character]
+format = "$symbol "                       
+success_symbol = "[ ➜](bold fg:#ffab70)"
+error_symbol = "[ﮊ ✗](bold red) "
+vicmd_symbol = "[ V](bold dimmed blue) "
+
+[package]
+disabled = true
+
+[battery]
+full_symbol = "•"
+charging_symbol = "⇡"
+discharging_symbol = "⇣"
+style = "bold blue"
+
+[[battery.display]]
+threshold = 10
+style = "bold red"
+
+[[battery.display]]
+threshold = 25
+style = "red"
+
+[[battery.display]]
+threshold = 50
+style = "bold yellow"
+
+[[battery.display]]
+threshold = 100
+style = "bold green"
+
+[status]
+#style = "bg:blue"
+symbol = " 💣 Status: "
+format = '[\[$symbol$status\]]($style) '
+disabled = false
+
+[username]
+style_user = "white bold"
+style_root = "red bold"
+format = "[ $user in]($style) "
+disabled = false
+show_always = true

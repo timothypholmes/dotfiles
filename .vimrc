@@ -1,31 +1,25 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
+set nocompatible       
+filetype off               
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
 " Install from command line
 " vim +PluginInstall +qall
 
-" let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
-" plugin on GitHub repo
 Plugin 'morhetz/gruvbox'
 Plugin 'vim-airline/vim-airline'
-Plugin 'tpope/vim-fugitive'
+" Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'yggdroot/indentline'
 Plugin 'lervag/vimtex'
 Plugin 'junegunn/goyo.vim'
-" End Plugins
-call vundle#end()            " required
-filetype plugin indent on    " required
+Plugin 'JuliaEditorSupport/julia-vim'
+" Plugin 'valloric/youcompleteme'
+
+call vundle#end()           
+filetype plugin indent on  
 "
 " Brief help
 " :PluginList       - lists configured plugins
@@ -38,7 +32,14 @@ filetype plugin indent on    " required
 
 " Syntax highlighting
 syntax enable
+filetype plugin indent on  
 
+set number " show line numbers
+set noswapfile " disable swap
+set hlsearch " highlight all results
+set ignorecase " ignore case in search
+set incsearch " show search results as you type
+set spell spelllang=en_us " spell check
 " Gruvbox colorscheme
 autocmd vimenter * ++nested colorscheme gruvbox
 colorscheme gruvbox
@@ -46,3 +47,20 @@ set background=dark
 let g:gruvbox_contrast_light="hard"
 highlight Normal ctermbg=NONE
 
+
+" Remap
+nnoremap <buffer> <F9> :w <bar> :exec '!python3' shellescape(@%, 1)<cr>
+
+set tabstop=4
+set shiftwidth=4
+set expandtab
+
+" Cheatsheet
+" ----------
+"
+"  Actions
+"  -------
+"  d: delete
+"  c: change
+"  y: yank (copy)
+"  v: visually select (V for line vs. character)
