@@ -3,28 +3,15 @@
 
 add_newline = false
 
-# old colors
-# ----------
-# blue = "blue"
-# red  = "red"
-# green= "green"
-# purple="purple"
-# yellow="yellow"
-
-# colors
-red="#f97583"
-green="#85e89d"
-yellow="#ffea7f"
-blue="#79b8ff"
-pink="#f692ce"
-orange="#ffab70"
-
+#[shell]
+#disabled=false
+#zsh_indicator="[ ➜](gr bold)"
 
 [character]
 format = "$symbol "                       
-success_symbol = "[ ➜](bold fg:#ffab70)"
-error_symbol = "[ﮊ ✗](bold red) "
-vicmd_symbol = "[ V](bold dimmed blue) "
+success_symbol = "[ ➜](bold #85e89d)"
+error_symbol = "[ﮊ ✗](bold #f97583)"
+vicmd_symbol = "[ V](bold dimmed #79b8ff)"
 
 [package]
 disabled = true
@@ -33,26 +20,30 @@ disabled = true
 full_symbol = "•"
 charging_symbol = "⇡"
 discharging_symbol = "⇣"
-style = "bold blue"
+#style = "bold blue"
 
 [[battery.display]]
 threshold = 10
-style = "bold red"
+style = "bold #f97583"
 
 [[battery.display]]
 threshold = 25
-style = "red"
+style = "#f97583"
 
 [[battery.display]]
-threshold = 50
-style = "bold yellow"
+threshold = 50 
+style = "bold #ffab70"
+
+[[battery.display]]
+threshold = 75 
+style = "bold #ffea7f"
 
 [[battery.display]]
 threshold = 100
-style = "bold green"
+style = "bold #85e89d"
 
 [status]
-#style = "bg:blue"
+#style = "bg:#79b8ff"
 symbol = " 💣 Status: "
 format = '[\[$symbol$status\]]($style) '
 disabled = false
@@ -63,3 +54,40 @@ style_root = "red bold"
 format = "[ $user in]($style) "
 disabled = false
 show_always = true
+
+[cmd_duration]
+style = "fg:#ffea7f"
+min_time = 2_000
+# show_milliseconds = true
+show_notifications = true
+min_time_to_notify = 45_000
+format = "[took 祥$duration]($style)"
+
+[directory]
+style = "italic fg:#79b8ff"
+read_only = ""
+read_only_style = " fg:#79b8ff"
+truncation_length = 4
+truncate_to_repo = true
+# truncation_symbol = "…"
+# fish_style_pwd_dir_length = 3
+format = "([[ ](fg:#ffab70)$read_only[ ](fg:#ffab70)]($read_only_style))[[](fg:#79b8ff)$path[ ](fg:#79b8ff)]($style)"
+
+[directory.substitutions]
+"~/Documents" = "📄"
+"~/Music" = "🎵"
+"~/Movies" = "🎥"
+"~/Pictures" = "📷"
+#"~/Sources" = ""
+"~" = "~"
+"/" = "/"
+
+[python]
+python_binary = "python3"
+
+[nodejs]
+# disabled = true
+# symbol = " "
+style = "fg:#85e89d"
+format = "[[ ](fg:#85e89d)$symbol$version[ ](fg:#85e89d)]($style)"
+ 

@@ -2,6 +2,7 @@ set nocompatible
 filetype off               
 
 " set the runtime path to include Vundle and initialize
+set backspace=indent,eol,start
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " Install from command line
