@@ -1,5 +1,26 @@
+# Fig pre block. Keep at the top of this file.
+. "$HOME/.fig/shell/zshrc.pre.zsh"
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
+
+# uncomment to load external source
+# if [ -f ~/dotfiles/.aliases ]; 
+#   then source ~/dotfiles/.aliases
+# fi
+
+# using [include]
+# [include]
+#   path = ~/dotfiles/.aliases
+# example: apply only on Linux
+#if [[ "$(uname)" == "Linux" ]]; then # place the code here
+#fi
+## example: set a Zsh theme only in Z shell
+
+#if [[ "$SHELL" == "zsh" ]]; then ZSH_THEME="af-magic"
+#fi
+# example: set a ~/bin folder on path only on a specific computer (in this case, the computer’s hostname is set to laptop)
+#if [[ "$(hostname)" == "laptop" ]]; then
+#export PATH="$HOME/bin:$PATH" fi
 
 # export
 export ZSH="/Users/timholmes/.oh-my-zsh"
@@ -25,6 +46,12 @@ plugins=(
 
 alias icloud="~/Library/Mobile\ Documents/com~apple~CloudDocs/"
 
+# general
+#alias z="vim ~/.zshrc"
+alias v="vim ~/.vimrc"
+alias c="clear"
+alias start_page="cd ~/Documents/development/startup-page && serve -s build -p 8000"
+
 # git
 alias gs="git status"
 alias ga="git add"
@@ -42,6 +69,8 @@ alias la="ls -a"
 alias lls="ls -la"
 alias lt="ls -tree"
 
+alias brew="arch -arm64 brew"
+
 # Vscode
 # alias code="open -a Visual\ Studio\ Code"
 # Do the following instead:
@@ -52,6 +81,7 @@ alias lt="ls -tree"
 # matlab
 
 # Other
+alias cat="bat"
 alias dog="cat"
 alias reload="source ~/.zshrc"
 
@@ -101,3 +131,10 @@ alias promanage="ssh pmuser1@10.20.30.246"
 
 eval "$(starship init zsh)"
 
+#PATH=$(pyenv root)/shims:$PATH
+#export PATH=/usr/local/bin:$PATH
+#HDF5_DIR=/opt/homebrew/Cellar/hdf5/1.12.1
+export PATH="/opt/homebrew/opt/python@3.8/bin:$PATH"
+
+# Fig post block. Keep at the bottom of this file.
+. "$HOME/.fig/shell/zshrc.post.zsh"

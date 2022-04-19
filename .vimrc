@@ -44,10 +44,9 @@ set spell spelllang=en_us " spell check
 " Gruvbox colorscheme
 autocmd vimenter * ++nested colorscheme gruvbox
 colorscheme gruvbox
-set background=dark
-let g:gruvbox_contrast_light="hard"
-highlight Normal ctermbg=NONE
-
+"set background=dark
+"let g:gruvbox_contrast_light="hard"
+"highlight Normal ctermbg=NONE
 
 " Remap
 nnoremap <buffer> <F9> :w <bar> :exec '!python3' shellescape(@%, 1)<cr>
@@ -65,3 +64,16 @@ set expandtab
 "  c: change
 "  y: yank (copy)
 "  v: visually select (V for line vs. character)
+
+" Custom conceal
+syntax match todoCheckbox "\[\ \]" conceal cchar=
+syntax match todoCheckbox "\[x\]" conceal cchar=
+syntax match todoCheckbox "\[-\]" conceal cchar=☒
+syntax match todoCheckbox "\[\.\]" conceal cchar=⊡
+syntax match todoCheckbox "\[o\]" conceal cchar=⬕
+let b:current_syntax = "todo"
+hi! link todoCheckbox normal
+" call matchadd('Conceal', '<-\&<', 10, -1, {'conceal':'←'})
+" call matchadd('Conceal', '<\zs-', 10, -1, {'conceal':' '})
+"hi def link todoCheckbox Todo
+set conceallevel=2
