@@ -47,7 +47,6 @@ plugins=(
 alias icloud="~/Library/Mobile\ Documents/com~apple~CloudDocs/"
 
 # general
-#alias z="vim ~/.zshrc"
 alias v="vim ~/.vimrc"
 alias c="clear"
 alias start_page="cd ~/Documents/development/startup-page && serve -s build -p 8000"
@@ -77,8 +76,6 @@ alias brew="arch -arm64 brew"
 # 1) in VSCode press 'Command' + 'Shift' + 'P
 # 2) type in 'shell'
 #alias code="code-insiders"
-
-# matlab
 
 # Other
 alias cat="bat"
@@ -131,9 +128,6 @@ alias promanage="ssh pmuser1@10.20.30.246"
 
 eval "$(starship init zsh)"
 
-#PATH=$(pyenv root)/shims:$PATH
-#export PATH=/usr/local/bin:$PATH
-#HDF5_DIR=/opt/homebrew/Cellar/hdf5/1.12.1
 export PATH="/opt/homebrew/opt/python@3.8/bin:$PATH"
 
 # Fig post block. Keep at the bottom of this file.
