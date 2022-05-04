@@ -51,6 +51,8 @@ alias brew="arch -arm64 brew"
 alias cat="bat"
 alias dog="cat"
 alias reload="source ~/.zshrc"
+alias myip="curl http://ipecho.net/plain; echo"
+alias hs='history | grep'
 
 # Time it
 TIMEFMT=$'\n================\nCPU\t%P\nuser\t%*U\nsystem\t%*S\ntotal\t%*E'
