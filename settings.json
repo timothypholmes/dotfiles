@@ -11,7 +11,7 @@
   ],
   "editor.rulers" : [80, 120],
   "latex-workshop.view.pdf.viewer" : "tab",
-  "workbench.colorTheme" : "Gruvbox Dark Hard",
+  "workbench.colorTheme" : "Community Material Theme Darker High Contrast",
   /*"workbench.editorAssociations" : {
     "*.ipynb" : "jupyter.notebook.ipynb"
   },*/
@@ -66,7 +66,7 @@
     "editorOverviewRuler.border": "#1a1a1a",
     "notifications.background": "#1a1a1a",
     "breadcrumb.background": "#1a1a1a",
-    "editorRuler.foreground" : "#707070"
+    "editorRuler.foreground" : "#707070",
   },
   "window.nativeTabs": true,
   "workbench.list.smoothScrolling": true,
