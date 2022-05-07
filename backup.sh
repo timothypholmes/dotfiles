@@ -6,6 +6,7 @@ cp /Users/$USER/Library/Application\ Support/Code/User/settings.json .
 
 
 # push code to gh if config change
+cd ~/dotfiles
 git add .
 set +e
 git status | grep modified
