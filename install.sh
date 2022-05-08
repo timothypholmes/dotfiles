@@ -22,6 +22,8 @@ fi
 echo "Updating homebrew..."
 brew update
 
+# spaceship
+npm install -g spaceship-prompt
 
 # GNU utilities and tools
 brew install coreutils
@@ -50,9 +52,8 @@ brew cleanup
 
 echo "Copying dotfiles from Github"
 cd ~
-git clone git@github.com:bradp/dotfiles.git .dotfiles
+git clone https://github.com/timothypholmes/dotfiles.git
 cd .dotfiles
-sh symdotfiles
 
 #Install Zsh & Oh My Zsh
 echo "Installing Oh My ZSH..."
@@ -61,27 +62,81 @@ curl -L http://install.ohmyz.sh | sh
 echo "Installing packages..."
 
 PACKAGES=(
+    bat
+    cario
+    cmake
+    curl
     docker 
     docker-machine
+    gcc
+    git
+    mysql
+    node
+    numpy
+    php
+    poppler
+    poppler-qt5
+    qt
+    r
+    sqlite
 )
 brew install ${PACKAGES[@]}
 
 echo "Installing cask..."
 
 CASKS=(
-    iterm2
     adobe-acrobat-reader
+    blender
+    brave-browser
+    fig
+    filezilla
+    insomnia
+    iterm2
+    monitorcontrol
     slack
     spotify
+    tableplus
     visual-studio-code
-    filezilla
 )
 
 echo "Installing cask apps..."
-brew cask install ${CASKS[@]}
+brew install --cask ${CASKS[@]}
 
-#"Setting screenshot format to PNG"
+echo "setting MacOS settings"
+
+# automatically quit printer app once the print jobs complete
+defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
+
+# check for software updates daily, not just once per week
+defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
+
+# hide icons for hard drives, servers, and removable media on the desktop
+defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool false
+
+# show all filename extensions in finder by default
+defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+
+# disable the warning when changing a file extension
+defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+
+# use column view in all Finder windows by default
+defaults write com.apple.finder FXPreferredViewStyle Clmv
+
+# avoiding the creation of .DS_Store files on network volumes
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+
+# hide the donate message
+defaults write org.m0k.transmission WarningDonate -bool false
+
+# hide the legal disclaimer
+defaults write org.m0k.transmission WarningLegal -bool false
+
+# setting screenshot format to png
 defaults write com.apple.screencapture type -string "png"
+
+# setting screenshots location to ~/Pictures/screenshots
+mkdir ~/Pictures/screenshots
+defaults write com.apple.screencapture location ~/Pictures/screenshots && killall SystemUIServer
 
 killall Finder
 

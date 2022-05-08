@@ -1,3 +1,4 @@
+cd ~/dotfiles
 cp ~/.vimrc .
 cp ~/.zshrc .
 cp ~/.config/starship.toml .
@@ -17,5 +18,5 @@ then
     git push
 else
     set -e
-    echo "No changes since last run"
+    echo "No changes since last run: $(date)"
 fi
