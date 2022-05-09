@@ -122,6 +122,12 @@ defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 # use column view in all Finder windows by default
 defaults write com.apple.finder FXPreferredViewStyle Clmv
 
+# show hidden files
+defaults write com.apple.finder AppleShowAllFiles -bool true
+
+# show file path in title
+defaults write com.apple.finder _FXShowPosixPathInTitle -boolean true
+
 # avoiding the creation of .DS_Store files on network volumes
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 
