@@ -1,6 +1,12 @@
 #!/usr/bin/env bash
 # Setup script for setting up a new macos machine
 
+# local vars
+HOME_ZPROFILE="$HOME/.zprofile"
+HOME_ZSHRC="$HOME/.zshrc"
+UNAME_MACHINE="$(/usr/bin/uname -m)"
+
+
 echo "Creating an SSH key for you..."
 ssh-keygen -t rsa
 
@@ -11,14 +17,25 @@ read -p "Press [Enter] key after this..."
 echo "Installing xcode-stuff"
 xcode-select --install
 
-# Check for Homebrew,
-# Install if we don't have it
+# Check for Homebrew, install if not installed
 if test ! $(which brew); then
-  echo "Installing homebrew..."
-  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  echo "Installing Homebrew..."
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+  echo "Added Homebrew shell to ${HOME_ZPROFILE}."
+  echo '# Add Homebrew support' >> ${HOME_ZPROFILE}
+
+  # load shellenv for Apple Silicon
+  if [[ "${UNAME_MACHINE}" == "arm64" ]]; then
+    echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ${HOME_ZPROFILE}
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+  fi
+
+  # add autocomplete for brew
+  echo 'FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"' >> ${HOME_ZPROFILE}
 fi
 
-# Update homebrew recipes
+# update homebrew recipes
 echo "Updating homebrew..."
 brew update
 
