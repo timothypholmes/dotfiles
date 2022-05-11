@@ -80,7 +80,7 @@
       "13px": "12px",
       "monospace": "12px"
   },
-  "editor.minimap.enabled": false,
+  "editor.minimap.enabled": true,
   "customizeUI.stylesheet": {
     ".tabs-container ": "padding-top: 10px; padding-left: 2px; padding-bottom: 10px",
     ".tabs-container > .tab": "border-radius: 15px 15px 15px 15px; height: 10px; margin-left: 5px; padding-right:4px",
@@ -89,4 +89,5 @@
   "terminal.integrated.env.osx": {
     "FIG_NEW_SESSION": "1"
   },
+  "explorer.confirmDragAndDrop": false,
 }
