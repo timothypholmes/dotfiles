@@ -1,13 +1,27 @@
 # Fig pre block. Keep at the top of this file.
 . "$HOME/.fig/shell/zshrc.pre.zsh"
 
+
+case "$OSTYPE" in
+  solaris*) OS="Solaris" ;;
+  darwin*)  OS="Darwin ";; 
+  linux*)   OS="Linux  " ;;
+  bsd*)     OS="BSD    " ;;
+  *)        OS="unknown: $OSTYPE" ;;
+esac
+
+
 # welcome message
-echo  "                  │              "
-echo  "         〈 〉   │ Hello, $USER "
-echo  "         Darwin   │ Welcome back."
-echo  "                  │             "
-
-
+echo  " "
+echo  "               ${OS:0:1}      │              "
+echo  "               ${OS:1:1}      │ Hello, $USER "
+echo  "               ${OS:2:1}      │ Welcome back."
+echo  "               ${OS:3:1}      │              "
+echo  "               ${OS:4:1}      │             " 
+echo  "               ${OS:5:1}      │              "
+echo  "               ${OS:6:1}      │              "
+echo  "            〈   〉  │                      "
+echo  " "
 
 # export
 export ZSH="/Users/timholmes/.oh-my-zsh"
