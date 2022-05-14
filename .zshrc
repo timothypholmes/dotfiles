@@ -1,6 +1,14 @@
 # Fig pre block. Keep at the top of this file.
 . "$HOME/.fig/shell/zshrc.pre.zsh"
 
+# welcome message
+echo  "                  │              "
+echo  "         〈 〉   │ Hello, $USER "
+echo  "         Darwin   │ Welcome back."
+echo  "                  │             "
+
+
+
 # export
 export ZSH="/Users/timholmes/.oh-my-zsh"
 export PATH=/usr/local/share/npm/bin:$PATH
