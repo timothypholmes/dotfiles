@@ -111,6 +111,14 @@ function generate_password() {
     LC_ALL=C tr -dc "[:alnum:]" < /dev/urandom | head -c 20 | pbcopy
 }
 
+function set_wallpaper() {
+    cd ~/Pictures/wallpapers
+    ls |sort -R |tail -1 |while read file; do
+    osascript -e "tell application \"Finder\" to set desktop picture to POSIX file \"$PWD/$file\""
+    done
+    cd -
+}
+
 alias setup="setup"
 alias genpass="genpass"
 alias promanage="ssh pmuser1@10.20.30.246"
