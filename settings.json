@@ -17,9 +17,9 @@
     },*/
     "python.defaultInterpreterPath" : "\/usr\/bin\/python3",
     "matlab.linterConfig" : "\/Applications\/matlab.app\/bin\/maci64\/mlint",
-    "terminal.integrated.fontFamily" : "FiraCode Nerd Font",
+    "terminal.integrated.fontFamily" : "FiraCode-Regular",
     // new
-    "editor.fontFamily": "FiraCode Nerd Font",
+    "editor.fontFamily": "FiraCode-Regular",
     "window.restoreWindows": "all",
     "files.hotExit": "onExit",
     "files.associations": {
@@ -73,7 +73,7 @@
     "editor.smoothScrolling": true,
     "customizeUI.activityBar": "bottom",
     "customizeUI.titleBar": "inline",
-    "customizeUI.font.regular": "FiraCode Nerd Font",
+    "customizeUI.font.regular": "FiraCode-Regular",
     "window.titleBarStyle": "native",
     "customizeUI.statusBarPosition": "bottom",
     "customizeUI.fontSizeMap": {
@@ -90,4 +90,5 @@
       "FIG_NEW_SESSION": "1"
     },
     "explorer.confirmDragAndDrop": false,
+    "security.workspace.trust.untrustedFiles": "open",
   }

@@ -28,7 +28,7 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export PATH=/opt/homebrew/bin:$PATH
 eval $(thefuck --alias)
 source $ZSH/oh-my-zsh.sh
-ZSH_THEME="spaceship"
+#ZSH_THEME="spaceship"
 
 plugins=(
     zsh-autosuggestions

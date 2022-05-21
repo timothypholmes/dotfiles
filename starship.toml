@@ -61,7 +61,7 @@ min_time = 2_000
 # show_milliseconds = true
 show_notifications = true
 min_time_to_notify = 45_000
-format = "[took 祥$duration]($style)"
+format = "[took 🕐 $duration]($style)"
 
 [directory]
 style = "italic fg:#79b8ff"
@@ -75,9 +75,11 @@ format = "([[ ](fg:#ffab70)$read_only[ ](fg:#ffab70)]($read_only_style))[[](fg:#
 
 [directory.substitutions]
 "~/Documents" = "📄"
+"~/Documents/development" = "🏗️"
 "~/Music" = "🎵"
 "~/Movies" = "🎥"
 "~/Pictures" = "📷"
+"~/dotflies" = "⚆"
 #"~/Sources" = ""
 "~" = "~"
 "/" = "/"
