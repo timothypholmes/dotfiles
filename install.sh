@@ -7,12 +7,12 @@ HOME_ZSHRC="$HOME/.zshrc"
 UNAME_MACHINE="$(/usr/bin/uname -m)"
 
 
-echo "Creating an SSH key for you..."
-ssh-keygen -t rsa
+#echo "Creating an SSH key for you..."
+#ssh-keygen -t rsa
 
-echo "Please add this public key to Github \n"
-echo "https://github.com/account/ssh \n"
-read -p "Press [Enter] key after this..."
+#echo "Please add this public key to Github \n"
+#echo "https://github.com/account/ssh \n"
+#read -p "Press [Enter] key after this..."
 
 echo "Installing xcode-stuff"
 xcode-select --install
@@ -38,6 +38,11 @@ fi
 # update homebrew recipes
 echo "Updating homebrew..."
 brew update
+
+# install vim packages
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+vim +PluginInstall +qall
 
 # spaceship
 npm install -g spaceship-prompt

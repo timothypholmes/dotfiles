@@ -1,7 +1,5 @@
 # Fig pre block. Keep at the top of this file.
 . "$HOME/.fig/shell/zshrc.pre.zsh"
-
-
 case "$OSTYPE" in
   solaris*) OS="Solaris" ;;
   darwin*)  OS="Darwin ";; 

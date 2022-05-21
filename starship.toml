@@ -90,4 +90,3 @@ python_binary = "python3"
 # symbol = " "
 style = "fg:#85e89d"
 format = "[[ ](fg:#85e89d)$symbol$version[ ](fg:#85e89d)]($style)"
- 
