@@ -9,7 +9,8 @@ call vundle#begin()
 " vim +PluginInstall +qall
 
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'morhetz/gruvbox'
+" Plugin 'morhetz/gruvbox'
+Plugin 'kaicataldo/material.vim'
 Plugin 'vim-airline/vim-airline'
 " Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
@@ -42,8 +43,10 @@ set ignorecase " ignore case in search
 set incsearch " show search results as you type
 set spell spelllang=en_us " spell check
 " Gruvbox colorscheme
-autocmd vimenter * ++nested colorscheme gruvbox
-colorscheme gruvbox
+"autocmd vimenter * ++nested colorscheme gruvbox
+" autocmd vimenter * ++nested colorscheme material
+" colorscheme gruvbox
+colorscheme material
 "set background=dark
 "let g:gruvbox_contrast_light="hard"
 "highlight Normal ctermbg=NONE

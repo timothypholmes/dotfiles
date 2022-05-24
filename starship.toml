@@ -75,11 +75,9 @@ format = "([[ ](fg:#ffab70)$read_only[ ](fg:#ffab70)]($read_only_style))[[](fg:#
 
 [directory.substitutions]
 "~/Documents" = "📄"
-"~/Documents/development" = "🏗️"
 "~/Music" = "🎵"
 "~/Movies" = "🎥"
 "~/Pictures" = "📷"
-"~/dotflies" = "⚆"
 #"~/Sources" = ""
 "~" = "~"
 "/" = "/"
@@ -92,3 +90,4 @@ python_binary = "python3"
 # symbol = " "
 style = "fg:#85e89d"
 format = "[[ ](fg:#85e89d)$symbol$version[ ](fg:#85e89d)]($style)"
+ 

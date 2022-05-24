@@ -1,5 +1,7 @@
 # Fig pre block. Keep at the top of this file.
 . "$HOME/.fig/shell/zshrc.pre.zsh"
+
+
 case "$OSTYPE" in
   solaris*) OS="Solaris" ;;
   darwin*)  OS="Darwin ";; 
@@ -28,7 +30,7 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export PATH=/opt/homebrew/bin:$PATH
 eval $(thefuck --alias)
 source $ZSH/oh-my-zsh.sh
-#ZSH_THEME="spaceship"
+ZSH_THEME="spaceship"
 
 plugins=(
     zsh-autosuggestions

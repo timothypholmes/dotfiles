@@ -1,94 +1,93 @@
 {
-    "editor.accessibilitySupport" : "off",
-    "extensions.ignoreRecommendations" : true,
-    "matlab.matlabpath" : "\/Applications\/matlab.app",
-    "explorer.confirmDelete" : false,
-    "workbench.startupEditor": "none",
-    "terminal.integrated.gpuAcceleration" : "on",
-    "window.zoomLevel" : -1,
-    "cSpell.enableFiletypes" : [
-      "matlab"
-    ],
-    "editor.rulers" : [80, 120],
-    "latex-workshop.view.pdf.viewer" : "tab",
-    "workbench.colorTheme" : "Community Material Theme Darker High Contrast",
-    /*"workbench.editorAssociations" : {
-      "*.ipynb" : "jupyter.notebook.ipynb"
-    },*/
-    "python.defaultInterpreterPath" : "\/usr\/bin\/python3",
-    "matlab.linterConfig" : "\/Applications\/matlab.app\/bin\/maci64\/mlint",
-    "terminal.integrated.fontFamily" : "FiraCode-Regular",
-    // new
-    "editor.fontFamily": "FiraCode-Regular",
-    "window.restoreWindows": "all",
-    "files.hotExit": "onExit",
-    "files.associations": {
-        "*.pl": "prolog"
-    },
-    "editor.suggestSelection": "first",
-    "files.exclude": {
-        "**/.classpath": true,
-        "**/.project": true,
-        "**/.settings": true,
-        "**/.factorypath": true,
-        "**/.vscode": true
-    },
-    "editor.fontSize": 13,
-    "workbench.productIconTheme": "icons-carbon",
-    "workbench.colorCustomizations": {
-      "list.activeSelectionBackground": "#191919",
-      "list.hoverBackground": "#191919",
-      "editorWidget.background": "#191919",
-      "panel.background": "#191919",
-      "titleBar.activeBackground": "#191919",
-      "breadcrumbPicker.background": "#191919",
-      "settings.dropdownBackground": "#191919",
-      "settings.numberInputBackground": "#191919",
-      "settings.textInputBackground": "#191919",
-      "settings.checkboxBackground": "#191919",
-      "editor.background": "#1a1a1a",
-      "tab.activeBackground": "#0f0f0f",
-      "tab.inactiveBackground": "#1a1a1a",
-      "sideBar.background": "#0f0f0f",
-      "sideBarSectionHeader.background": "#0f0f0f",
-      "activityBar.background": "#0f0f0f",
-      "statusBar.background": "#0f0f0f",
-      "scrollbarSlider.activeBackground": "#0f0f0f",
-      "tab.activeBorder": "#1a1a1a00",
-      "editorGroupHeader.tabsBackground": "#1a1a1a",
-      "statusBar.noFolderBackground": "#1a1a1a",
-      "tab.border": "#1a1a1a",
-      "editorHoverWidget.background": "#1a1a1a",
-      "menu.background": "#1a1a1a",
-      "debugToolBar.background": "#1a1a1a",
-      "editorBracketMatch.background": "#1a1a1a",
-      "quickInput.background": "#1a1a1a",
-      "editorOverviewRuler.border": "#1a1a1a",
-      "notifications.background": "#1a1a1a",
-      "breadcrumb.background": "#1a1a1a",
-      "editorRuler.foreground" : "#707070",
-    },
-    "window.nativeTabs": true,
-    "workbench.list.smoothScrolling": true,
-    "editor.smoothScrolling": true,
-    "customizeUI.activityBar": "bottom",
-    "customizeUI.titleBar": "inline",
-    "customizeUI.font.regular": "FiraCode-Regular",
-    "window.titleBarStyle": "native",
-    "customizeUI.statusBarPosition": "bottom",
-    "customizeUI.fontSizeMap": {
-        "13px": "12px",
-        "monospace": "12px"
-    },
-    "editor.minimap.enabled": true,
-    "customizeUI.stylesheet": {
-      ".tabs-container ": "padding-top: 10px; padding-left: 2px; padding-bottom: 10px",
-      ".tabs-container > .tab": "border-radius: 15px 15px 15px 15px; height: 10px; margin-left: 5px; padding-right:4px",
-      ".monaco-editor .suggest-widget": "border-radius: 10px 10px 10px 10px; overflow:hidden;"
-    },
-    "terminal.integrated.env.osx": {
-      "FIG_NEW_SESSION": "1"
-    },
-    "explorer.confirmDragAndDrop": false,
-    "security.workspace.trust.untrustedFiles": "open",
-  }
+  "editor.accessibilitySupport" : "off",
+  "extensions.ignoreRecommendations" : true,
+  "matlab.matlabpath" : "\/Applications\/matlab.app",
+  "explorer.confirmDelete" : false,
+  "workbench.startupEditor": "none",
+  "terminal.integrated.gpuAcceleration" : "on",
+  "window.zoomLevel" : -1,
+  "cSpell.enableFiletypes" : [
+    "matlab"
+  ],
+  "editor.rulers" : [80, 120],
+  "latex-workshop.view.pdf.viewer" : "tab",
+  "workbench.colorTheme" : "Community Material Theme Darker",
+  /*"workbench.editorAssociations" : {
+    "*.ipynb" : "jupyter.notebook.ipynb"
+  },*/
+  "python.defaultInterpreterPath" : "\/usr\/bin\/python3",
+  "matlab.linterConfig" : "\/Applications\/matlab.app\/bin\/maci64\/mlint",
+  "terminal.integrated.fontFamily" : "FiraCode Nerd Font",
+  // new
+  "editor.fontFamily": "FiraCode Nerd Font",
+  "window.restoreWindows": "all",
+  "files.hotExit": "onExit",
+  "files.associations": {
+      "*.pl": "prolog"
+  },
+  "editor.suggestSelection": "first",
+  "files.exclude": {
+      "**/.classpath": true,
+      "**/.project": true,
+      "**/.settings": true,
+      "**/.factorypath": true,
+      "**/.vscode": true
+  },
+  "editor.fontSize": 13,
+  "workbench.productIconTheme": "icons-carbon",
+  "workbench.colorCustomizations": {
+    "list.activeSelectionBackground": "#191919",
+    "list.hoverBackground": "#191919",
+    "editorWidget.background": "#191919",
+    "panel.background": "#191919",
+    "titleBar.activeBackground": "#191919",
+    "breadcrumbPicker.background": "#191919",
+    "settings.dropdownBackground": "#191919",
+    "settings.numberInputBackground": "#191919",
+    "settings.textInputBackground": "#191919",
+    "settings.checkboxBackground": "#191919",
+    "editor.background": "#1a1a1a",
+    "tab.activeBackground": "#0f0f0f",
+    "tab.inactiveBackground": "#1a1a1a",
+    "sideBar.background": "#0f0f0f",
+    "sideBarSectionHeader.background": "#0f0f0f",
+    "activityBar.background": "#0f0f0f",
+    "statusBar.background": "#0f0f0f",
+    "scrollbarSlider.activeBackground": "#0f0f0f",
+    "tab.activeBorder": "#1a1a1a00",
+    "editorGroupHeader.tabsBackground": "#1a1a1a",
+    "statusBar.noFolderBackground": "#1a1a1a",
+    "tab.border": "#1a1a1a",
+    "editorHoverWidget.background": "#1a1a1a",
+    "menu.background": "#1a1a1a",
+    "debugToolBar.background": "#1a1a1a",
+    "editorBracketMatch.background": "#1a1a1a",
+    "quickInput.background": "#1a1a1a",
+    "editorOverviewRuler.border": "#1a1a1a",
+    "notifications.background": "#1a1a1a",
+    "breadcrumb.background": "#1a1a1a",
+    "editorRuler.foreground" : "#707070",
+  },
+  "window.nativeTabs": true,
+  "workbench.list.smoothScrolling": true,
+  "editor.smoothScrolling": true,
+  "customizeUI.activityBar": "bottom",
+  "customizeUI.titleBar": "inline",
+  "customizeUI.font.regular": "FiraCode Nerd Font",
+  "window.titleBarStyle": "native",
+  "customizeUI.statusBarPosition": "bottom",
+  "customizeUI.fontSizeMap": {
+      "13px": "12px",
+      "monospace": "12px"
+  },
+  "editor.minimap.enabled": true,
+  "customizeUI.stylesheet": {
+    ".tabs-container ": "padding-top: 10px; padding-left: 2px; padding-bottom: 10px",
+    ".tabs-container > .tab": "border-radius: 15px 15px 15px 15px; height: 10px; margin-left: 5px; padding-right:4px",
+    ".monaco-editor .suggest-widget": "border-radius: 10px 10px 10px 10px; overflow:hidden;"
+  },
+  "terminal.integrated.env.osx": {
+    "FIG_NEW_SESSION": "1"
+  },
+  "explorer.confirmDragAndDrop": false,
+}
