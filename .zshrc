@@ -79,38 +79,6 @@ alias hs='history | grep'
 # Time it
 TIMEFMT=$'\n================\nCPU\t%P\nuser\t%*U\nsystem\t%*S\ntotal\t%*E'
 
-function setup {
-	echo "Which enviorment would you like to start: "
-	echo "------------------------------------------"
-	echo "                                          "
-	echo "d) documents                              "
-	echo "t) thesis                                 "
-    echo "dv) development                            "
-	echo "                                          "
-	echo "e) exit                                   "
-
-	echo "input option: " 
-	read env 
-
-	if [ "$env" = "d" ]; then
-		code -n "~/Documents" 
-		
-	elif [ "$env" = "t" ]; then
-		code "/Users/timholmes/Library/Mobile Documents/com~apple~CloudDocs/thesis" 
-
-	elif [ "$env" = "dv" ]; then
-		code "~/Documents/development" 
-
-	elif [ "$env" = "e" ]; then
-		return
-
-	fi
-}
-
-function generate_password() {
-    LC_ALL=C tr -dc "[:alnum:]" < /dev/urandom | head -c 20 | pbcopy
-}
-
 function set_wallpaper() {
     cd ~/Pictures/wallpapers
     ls |sort -R |tail -1 |while read file; do
@@ -118,9 +86,15 @@ function set_wallpaper() {
     done
     cd -
 }
+function list_large_git_files() {
+    git rev-list --objects --all |
+    git cat-file --batch-check='%(objecttype) %(objectname) %(objectsize) %(rest)' |
+    sed -n 's/^blob //p' |
+    sort --numeric-sort --key=2 |
+    cut -c 1-12,41- |
+    $(command -v gnumfmt || echo numfmt) --field=2 --to=iec-i --suffix=B --padding=7 --round=nearest
+}
 
-alias setup="setup"
-alias genpass="genpass"
 alias promanage="ssh pmuser1@10.20.30.246"
 
 eval "$(starship init zsh)"
