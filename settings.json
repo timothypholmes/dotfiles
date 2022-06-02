@@ -90,4 +90,5 @@
     "FIG_NEW_SESSION": "1"
   },
   "explorer.confirmDragAndDrop": false,
+  "security.workspace.trust.untrustedFiles": "newWindow",
 }
