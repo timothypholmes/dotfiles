@@ -95,8 +95,6 @@ function list_large_git_files() {
     $(command -v gnumfmt || echo numfmt) --field=2 --to=iec-i --suffix=B --padding=7 --round=nearest
 }
 
-alias promanage="ssh pmuser1@10.20.30.246"
-
 eval "$(starship init zsh)"
 export PATH="/opt/homebrew/opt/python@3.8/bin:$PATH"
 
