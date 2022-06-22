@@ -1,7 +1,5 @@
 # Fig pre block. Keep at the top of this file.
-. "$HOME/.fig/shell/zshrc.pre.zsh"
-
-
+[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && . "$HOME/.fig/shell/zshrc.pre.zsh"
 case "$OSTYPE" in
   solaris*) OS="Solaris" ;;
   darwin*)  OS="Darwin ";; 
@@ -99,4 +97,4 @@ eval "$(starship init zsh)"
 export PATH="/opt/homebrew/opt/python@3.8/bin:$PATH"
 
 # Fig post block. Keep at the bottom of this file.
-. "$HOME/.fig/shell/zshrc.post.zsh"
+[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && . "$HOME/.fig/shell/zshrc.post.zsh"
