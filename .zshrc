@@ -1,5 +1,3 @@
-# Fig pre block. Keep at the top of this file.
-[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && . "$HOME/.fig/shell/zshrc.pre.zsh"
 case "$OSTYPE" in
   solaris*) OS="Solaris" ;;
   darwin*)  OS="Darwin ";; 
@@ -95,6 +93,3 @@ function list_large_git_files() {
 
 eval "$(starship init zsh)"
 export PATH="/opt/homebrew/opt/python@3.8/bin:$PATH"
-
-# Fig post block. Keep at the bottom of this file.
-[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && . "$HOME/.fig/shell/zshrc.post.zsh"
