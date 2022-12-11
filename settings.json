@@ -4,8 +4,7 @@
   "matlab.matlabpath" : "\/Applications\/matlab.app",
   "explorer.confirmDelete" : false,
   "workbench.startupEditor": "none",
-  "terminal.integrated.gpuAcceleration" : "on",
-  "window.zoomLevel" : -1,
+  "terminal.integrated.gpuAcceleration": "on",
   "cSpell.enableFiletypes" : [
     "matlab"
   ],
@@ -91,4 +90,5 @@
   },
   "explorer.confirmDragAndDrop": false,
   "security.workspace.trust.untrustedFiles": "newWindow",
+  "window.zoomLevel": -1,
 }
