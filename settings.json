@@ -91,4 +91,5 @@
   "explorer.confirmDragAndDrop": false,
   "security.workspace.trust.untrustedFiles": "newWindow",
   "window.zoomLevel": -1,
+  "editor.inlineSuggest.enabled": true,
 }
