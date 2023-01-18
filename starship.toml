@@ -9,7 +9,9 @@ add_newline = false
 
 [character]
 format = "$symbol "                       
-success_symbol = "[ ➜](bold #85e89d)"
+#success_symbol = "[ ➜](bold #85e89d)"
+# https://www.nerdfonts.com
+success_symbol = "[  ](bold #85e89d)"
 error_symbol = "[ﮊ ✗](bold #f97583)"
 vicmd_symbol = "[ V](bold dimmed #79b8ff)"
 

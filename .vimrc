@@ -9,7 +9,7 @@ call vundle#begin()
 " vim +PluginInstall +qall
 
 Plugin 'VundleVim/Vundle.vim'
-" Plugin 'morhetz/gruvbox'
+Plugin 'morhetz/gruvbox'
 Plugin 'kaicataldo/material.vim'
 Plugin 'vim-airline/vim-airline'
 " Plugin 'tpope/vim-fugitive'
@@ -18,7 +18,7 @@ Plugin 'yggdroot/indentline'
 Plugin 'lervag/vimtex'
 Plugin 'junegunn/goyo.vim'
 Plugin 'JuliaEditorSupport/julia-vim'
-" Plugin 'valloric/youcompleteme'
+Plugin 'valloric/youcompleteme'
 
 call vundle#end()           
 filetype plugin indent on  
@@ -43,13 +43,15 @@ set ignorecase " ignore case in search
 set incsearch " show search results as you type
 set spell spelllang=en_us " spell check
 " Gruvbox colorscheme
-"autocmd vimenter * ++nested colorscheme gruvbox
+autocmd vimenter * ++nested colorscheme gruvbox
+colorscheme gruvbox
+" colorscheme material
 " autocmd vimenter * ++nested colorscheme material
-" colorscheme gruvbox
-colorscheme material
-"set background=dark
-"let g:gruvbox_contrast_light="hard"
-"highlight Normal ctermbg=NONE
+
+" other settings
+" set background=dark
+" let g:gruvbox_contrast_light="hard"
+" highlight Normal ctermbg=NONE
 
 " Remap
 nnoremap <buffer> <F9> :w <bar> :exec '!python3' shellescape(@%, 1)<cr>
