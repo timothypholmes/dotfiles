@@ -19,6 +19,8 @@ echo  "               ${OS:6:1}      │              "
 echo  "            〈   〉  │                      "
 echo  " "
 
+~/.scripts/confetti_shortcut.sh
+
 # export
 export ZSH="/Users/timholmes/.oh-my-zsh"
 export PATH=/usr/local/share/npm/bin:$PATH
@@ -50,6 +52,7 @@ alias gp="git push"
 
 # python
 alias pip="python3 -m pip install"
+alias py="python3"
 
 # lsd (lsdeluxe)
 alias ls="lsd"
