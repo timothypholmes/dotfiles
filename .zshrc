@@ -42,6 +42,9 @@ eval "$(starship init zsh)"
 eval $(thefuck --alias)
 
 # export
+export HISTFILESIZE=1000000000
+export HISTSIZE=1000000
+
 export ZSH="/Users/timholmes/.oh-my-zsh"
 export PATH=/usr/local/share/npm/bin:$PATH
 export PATH="$HOME/.cargo/bin:$PATH"
