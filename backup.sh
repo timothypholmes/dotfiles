@@ -3,7 +3,7 @@ cp ~/.vimrc .
 cp ~/.zshrc .
 cp ~/.config/starship.toml .
 cp /Users/$USER/Library/Application\ Support/Code/User/settings.json .
-cp -r ~/.scripts ./.scripts
+cp -r ~/.config/scripts ./scripts
 
 
 # push code to gh if config change

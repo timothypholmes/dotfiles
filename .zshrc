@@ -8,21 +8,21 @@ plugins=(
 )
 
 # import configs
-. ~/.scripts/.generalconfig.sh
+. ~/.config/scripts/.general_config.sh
 if grep -qi microsoft /proc/version; then
-    . ~/.scripts/.wslconfig.sh
+    . ~/.config/scripts/.wsl_config.sh
 fi
 if [[ $OSTYPE == 'darwin'* ]]; then
-    . ~/.scripts/.macconfig.sh
+    . ~/.config/scripts/.mac_config.sh
 fi
-. ~/.scripts/.gitconfig.sh
+. ~/.config/scripts/.git_config.sh
 
 alias icloud="~/Library/Mobile\ Documents/com~apple~CloudDocs/"
 
 # general
 alias v="vim ~/.vimrc"
 alias z="vim ~/.zshrc"
-alias s="vim ~/.scripts"
+alias s="vim ~/.config/scripts"
 alias c="clear"
 alias reload="source ~/.zshrc"
 alias myip="curl http://ipecho.net/plain; echo"
