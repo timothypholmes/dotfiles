@@ -1,3 +1,9 @@
+#!/bin/bash
+
+# deploy.sh
+# Script is used to copy changes made to dotfiles and 
+# update them in the repo.
+
 cd ~/dotfiles
 cp ~/.vimrc .
 cp ~/.zshrc .
