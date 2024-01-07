@@ -1,0 +1,3 @@
+
+# ignore work/project specific scripts
+scripts/.project.sh
