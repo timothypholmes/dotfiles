@@ -9,15 +9,21 @@ plugins=(
 
 # import configs
 . ~/.config/scripts/.general_config.sh
+. ~/.config/scripts/.git_config.sh
+if [[ -f "~/.config/scripts/.project_config.sh" ]]; then
+    . ~/.config/scripts/.project_config.sh
+fi
+
+# configs by os type
 if grep -qi microsoft /proc/version; then
     . ~/.config/scripts/.wsl_config.sh
 fi
 if [[ $OSTYPE == 'darwin'* ]]; then
     . ~/.config/scripts/.mac_config.sh
 fi
-. ~/.config/scripts/.git_config.sh
-
-alias icloud="~/Library/Mobile\ Documents/com~apple~CloudDocs/"
+if [[ $OSTYPE == 'linux'* ]]; then
+    . ~/.config/scripts/.linux_config.sh
+fi
 
 # general
 alias v="vim ~/.vimrc"
@@ -45,12 +51,11 @@ eval $(thefuck --alias)
 export HISTFILESIZE=1000000000
 export HISTSIZE=1000000
 
-export ZSH="/Users/timholmes/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 export PATH=/usr/local/share/npm/bin:$PATH
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH=/opt/homebrew/bin:$PATH
 export PATH=~/anaconda3/bin:$PATH
 export PATH="/opt/homebrew/opt/python@3.8/bin:$PATH"
-export PATH=/home/tim/bin:$PATH
+export PATH=$HOME/bin:$PATH
 export PATH=:$PATH
-

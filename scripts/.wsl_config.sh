@@ -2,28 +2,10 @@
 
 echo "Ubuntu on Windows"
 
-# starting dir
-cd /mnt/c/Users/timh/projects
-
 # general alias
 alias open="wslview" # WLS2 command only
 alias code="code --remote wsl+Ubuntu"
 alias install="sudo apt-get update && sudo apt-get install"
-
-# alias paths
-alias icloud="cd /mnt/c/Users/timh/iCloudDrive"
-alias logic="cd /mnt/c/Users/timh/OneDrive\ -\ Logic20\ 20\ Inc/Documents/logic"
-alias sempra="cd /mnt/c/Users/timh/OneDrive\ -\ Logic20\ 20\ Inc/Documents/sempra"
-alias pln="cd /mnt/c/Users/timh/projects/sdge-it-wingspln-python"
-alias dataops="cd /mnt/c/Users/timh/projects/sdge-it-wmp-analytics-dataops"
-
-function build_page {
-    cd /mnt/c/Users/timh/projects/startup-page && npm run build && cd -
-}   
-    
-function start_page {
-    cd /mnt/c/Users/timh/projects/startup-page && serve -s dist -p 8000 && cd -
-}  
 
 function setup_github_ssh_key {
     echo "Setting up Git"

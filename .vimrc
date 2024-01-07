@@ -12,13 +12,12 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'morhetz/gruvbox'
 Plugin 'kaicataldo/material.vim'
 Plugin 'vim-airline/vim-airline'
-" Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'yggdroot/indentline'
 Plugin 'lervag/vimtex'
 Plugin 'junegunn/goyo.vim'
 Plugin 'JuliaEditorSupport/julia-vim'
-Plugin 'valloric/youcompleteme'
+Plugin 'sainnhe/everforest'
 
 call vundle#end()           
 filetype plugin indent on  
@@ -36,22 +35,21 @@ filetype plugin indent on
 syntax enable
 filetype plugin indent on  
 
+" settings
+" ---
 set number " show line numbers
 set noswapfile " disable swap
 set hlsearch " highlight all results
 set ignorecase " ignore case in search
 set incsearch " show search results as you type
 set spell spelllang=en_us " spell check
-" Gruvbox colorscheme
-autocmd vimenter * ++nested colorscheme gruvbox
-colorscheme gruvbox
-" colorscheme material
-" autocmd vimenter * ++nested colorscheme material
 
-" other settings
-" set background=dark
-" let g:gruvbox_contrast_light="hard"
-" highlight Normal ctermbg=NONE
+" color schemes
+" ---
+set background=dark
+colorscheme everforest
+" colorscheme gruvbox
+" colorscheme material
 
 " Remap
 nnoremap <buffer> <F9> :w <bar> :exec '!python3' shellescape(@%, 1)<cr>
@@ -78,7 +76,4 @@ syntax match todoCheckbox "\[\.\]" conceal cchar=⊡
 syntax match todoCheckbox "\[o\]" conceal cchar=⬕
 let b:current_syntax = "todo"
 hi! link todoCheckbox normal
-" call matchadd('Conceal', '<-\&<', 10, -1, {'conceal':'←'})
-" call matchadd('Conceal', '<\zs-', 10, -1, {'conceal':' '})
-"hi def link todoCheckbox Todo
 set conceallevel=2
