@@ -25,10 +25,14 @@ vim +PluginInstall +qall
 - [modern-unix](https://github.com/ibraheemdev/modern-unix)
 
 
-### CLI Programs
+### zsh plugins
 - [dirhistory](https://git.honorlee.me/HonorLee/ohmyzsh/src/00c37b6991895aac0398a24d7d8b78cda63dec05/plugins/dirhistory)
 - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md)
 - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
+- [web-search](https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/web-search/web-search.plugin.zsh)
+- [you-should-use](https://github.com/MichaelAquilina/zsh-you-should-use?ref=catalins.tech)
+- [zsh-bat](https://github.com/fdellwing/zsh-bat?ref=catalins.tech)
+- [copyfile](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/copyfile)
 
 
 ### Python
