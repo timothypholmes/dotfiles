@@ -1,3 +1,5 @@
 
 # ignore work/project specific scripts
 scripts/.project.sh
+
+__pycache__

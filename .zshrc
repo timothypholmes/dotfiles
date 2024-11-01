@@ -5,38 +5,32 @@ ZSH_THEME="spaceship"
 plugins=(
     zsh-autosuggestions
     git
+    dirhistory
+    zsh-syntax-highlighting
+    web-search
+    you-should-use
+    zsh-bat
+    copyfile
 )
 
 # import configs
-. ~/.config/scripts/.general_config.sh
-. ~/.config/scripts/.git_config.sh
-if [[ -f "~/.config/scripts/.project_config.sh" ]]; then
-    . ~/.config/scripts/.project_config.sh
+. ~/dotfiles/scripts/.general_config.sh
+. ~/dotfiles/scripts/.git_config.sh
+. ~/dotfiles/scripts/.python_config.sh
+if [[ -f "~/dotfiles/scripts/.project_config.sh" ]]; then
+    . ~/dotfiles/scripts/.project_config.sh
 fi
 
 # configs by os type
 if grep -qi microsoft /proc/version; then
-    . ~/.config/scripts/.wsl_config.sh
+    . ~/dotfiles/scripts/.wsl_config.sh
 fi
 if [[ $OSTYPE == 'darwin'* ]]; then
-    . ~/.config/scripts/.mac_config.sh
+    . ~/dotfiles/scripts/.mac_config.sh
 fi
 if [[ $OSTYPE == 'linux'* ]]; then
-    . ~/.config/scripts/.linux_config.sh
+    . ~/dotfiles/scripts/.linux_config.sh
 fi
-
-# general
-alias v="vim ~/.vimrc"
-alias z="vim ~/.zshrc"
-alias s="vim ~/.config/scripts"
-alias c="clear"
-alias reload="source ~/.zshrc"
-alias myip="curl http://ipecho.net/plain; echo"
-alias hs="history | grep"
-
-# python
-alias pip="python3 -m pip install"
-alias py="python3"
 
 # Vscode
 # alias code="open -a Visual\ Studio\ Code"
@@ -59,3 +53,10 @@ export PATH=~/anaconda3/bin:$PATH
 export PATH="/opt/homebrew/opt/python@3.8/bin:$PATH"
 export PATH=$HOME/bin:$PATH
 export PATH=:$PATH
+
+export PATH=$HOME/bin:$PATH
+export PATH=:$PATH
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
