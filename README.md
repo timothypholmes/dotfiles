@@ -13,6 +13,11 @@ To install vim packages run the following:
 vim +PluginInstall +qall
 ```
 
+### Firefox installation  
+
+  1. Paste the contents of sidebery.css into the styles editor of the Sidebery extension.
+  2. Paste the contents of userChrome.css into the userChrome.css file located in the "chrome" folder of your firefox profile(about:profiles). If there is no such folder, create the folder and file yourself.
+
 ## Packages
 
 ### Productivity
