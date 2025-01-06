@@ -108,14 +108,20 @@ echo "Installing cask..."
 
 CASKS=(
     adobe-acrobat-reader
-    blender
-    brave-browser
-    fig
-    filezilla
+    bitwarden
+    chatgpt
+    cyberduck
+    discord
+    firefox
+    ghostty
     insomnia
-    iterm2
+    jordanbaird-ice
     monitorcontrol
+    obsidian
+    raycast
+    shottr
     slack
+    syncthing
     spotify
     tableplus
     visual-studio-code
