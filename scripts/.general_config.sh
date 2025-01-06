@@ -1,29 +1,23 @@
 #!/usr/bin/env bash
 
-echo "\033[0;34m
-                      .   *        .       .
-       *      -0-
-          .                .  *       - )-
-       .      *       o       .       *
- o                |
-           .     -O-
-.                 |        *      .     -0-
-       *  o     .    '       *      .        o
-              .         .        |      *
-   *             *              -O-          .
-         .             *         |     ,
-                .           o
-        .---.
-  =   _/__~0_\_     .  *            o       '
- = = (_________)             .
-                 .                        *
-       *               - ) -       *
-              .               ."
+ascii_dir=~/dotfiles/ascii
+if [ -d "$ascii_dir" ]; then
+    ascii_script=$(find "$ascii_dir" -type f | shuf -n 1)
+    if [ -n "$ascii_script" ]; then
+        chmod +x "$ascii_script" 2>/dev/null
+        "$ascii_script"
+    else
+        echo "No files found in $ascii_dir."
+    fi
+else
+    echo "ASCII script directory not found: $ascii_dir"
+fi
+
 
 month=`date +%B`
 day=`date +%d`
 time=`date +"%I:%M %p"`
-echo -e " \033[0;34m $month $day, $time \033[0;35m | \"Experience is the teacher of all things.\" \033[0;33m - Julius Caesar"
+echo -e " \033[0;34m $month $day, $time \033[0;35m | \"Either write something worth reading or do something worth writing.\" \033[0;33m - Benjamin Franklin"
 
 # general
 alias v="vim ~/.vimrc"
