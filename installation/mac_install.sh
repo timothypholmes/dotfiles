@@ -6,7 +6,6 @@ HOME_ZPROFILE="$HOME/.zprofile"
 HOME_ZSHRC="$HOME/.zshrc"
 UNAME_MACHINE="$(/usr/bin/uname -m)"
 
-
 #echo "Creating an SSH key for you..."
 #ssh-keygen -t rsa
 
@@ -39,59 +38,24 @@ fi
 echo "Updating homebrew..."
 brew update
 
-# install vim packages
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-
-vim +PluginInstall +qall
-
-# spaceship
-npm install -g spaceship-prompt
-
-# GNU utilities and tools
-brew install coreutils
-brew install gnu-sed
-brew install gnu-tar
-brew install gnu-indent
-brew install gnu-which
-
-brew install findutils
-
-export PATH="/usr/local/opt/findutils/libexec/gnubin:$PATH"
-
-echo "Installing Git..."
-brew install git
-
-echo "Git config"
-
-git config --global user.name "Timothy Holmes"
-git config --global user.email tpholmes7@gmail.com
-
-brew install wget
-brew install node
-
-echo "Cleaning up brew"
-brew cleanup
-
-echo "Copying dotfiles from Github"
-cd ~
-git clone https://github.com/timothypholmes/dotfiles.git
-cd .dotfiles
-
-#Install Zsh & Oh My Zsh
-echo "Installing Oh My ZSH..."
-curl -L http://install.ohmyz.sh | sh
-
 echo "Installing packages..."
-
 PACKAGES=(
     bat
+    bitwarden
     cario
     cmake
+    coreutils
     curl
     docker 
     docker-machine
+    findutils
     gcc
     git
+    gnu-sed
+    gnu-tar
+    gnu-indent
+    gnu-which
+    hoverly
     mysql
     node
     numpy
@@ -101,14 +65,18 @@ PACKAGES=(
     qt
     r
     sqlite
+    wget
 )
-brew install ${PACKAGES[@]}
+for package in "${PACKAGES[@]}"; do
+  echo "Installing $package..."
+  if ! brew install "$package"; then
+    echo "Failed to install $package. Skipping..."
+  fi
+done
 
 echo "Installing cask..."
-
 CASKS=(
     adobe-acrobat-reader
-    bitwarden
     chatgpt
     cyberduck
     discord
@@ -126,9 +94,43 @@ CASKS=(
     tableplus
     visual-studio-code
 )
+for cask in "${CASKS[@]}"; do
+  echo "Installing $cask..."
+  if ! brew install --cask "$cask"; then
+    echo "Failed to install $cask. Skipping..."
+  fi
+done
 
-echo "Installing cask apps..."
-brew install --cask ${CASKS[@]}
+# install vim packages
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+vim +PluginInstall +qall
+
+# spaceship
+npm install -g spaceship-prompt
+
+export PATH="/usr/local/opt/findutils/libexec/gnubin:$PATH"
+
+echo "Installing Git..."
+brew install git
+
+echo "Git config"
+
+git config --global user.name "Timothy Holmes"
+git config --global user.email tpholmes7@gmail.com
+
+echo "Cleaning up brew"
+brew cleanup
+
+echo "Copying dotfiles from Github"
+cd ~
+git clone https://github.com/timothypholmes/dotfiles.git
+cd .dotfiles
+
+#Install Zsh & Oh My Zsh
+echo "Installing Oh My ZSH..."
+curl -L http://install.ohmyz.sh | sh
+
 
 echo "setting MacOS settings"
 
@@ -167,6 +169,9 @@ defaults write org.m0k.transmission WarningLegal -bool false
 
 # setting screenshot format to png
 defaults write com.apple.screencapture type -string "png"
+
+# minimize windows to the application icon
+defaults write com.apple.dock minimize-to-application -bool true
 
 # setting screenshots location to ~/Pictures/screenshots
 mkdir ~/Pictures/screenshots
