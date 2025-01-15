@@ -121,3 +121,16 @@ function lazygit() {
     date
 }
 
+function git_pull_latest() {
+
+  current_branch=$(git rev-parse --abbrev-ref HEAD)
+  new_branch="${current_branch}-new"
+
+  git stash || { echo "Failed to stash changes"; return 1; }
+  git checkout master || { echo "Failed to checkout master"; return 1; }
+  git pull origin master || { echo "Failed to pull from origin master"; return 1; }
+  git checkout -b "$new_branch" || { echo "Failed to create and switch to $new_branch"; return 1; }
+  git stash apply stash@{0} || { echo "Failed to apply stash"; return 1; }
+  git stash drop stash@{0} || { echo "Failed to drop stash"; return 1; }
+  echo "Switched to new branch: $new_branch"
+}
