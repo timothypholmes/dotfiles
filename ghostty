@@ -2,7 +2,7 @@
 # ~/Library/Application\ Support/com.mitchellh.ghostty/config
 
 # Window Config
-macos-titlebar-style = hidden
+# macos-titlebar-style = hidden # uncomment to remove tabs
 background-opacity = 0.9
 background-blur-radius = 6
 window-padding-x = 16
@@ -30,3 +30,10 @@ keybind = global:ctrl+space=toggle_quick_terminal
 
 # Mouse Config
 mouse-hide-while-typing = true
+
+# Icon
+macos-icon = custom-style
+macos-icon-frame = aluminum 
+macos-icon-ghost-color = #6c6c6c
+macos-icon-screen-color = #005f87
+
